@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcula el costo de tu viaje!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function calculadoraDeViaje() {
+          const a = parseFloat(document.getElementById('a').value);
+          const b = parseFloat(document.getElementById('b').value);
+          const resultado = Math.round((a + b) * 1.15);
+          if (resultado < 1000000) {
+                document.getElementById('resultado').innerText = `El costo del viaje es: ${resultado}`;
+                return;
+          } else if (resultado >= 1000000) {
+                const resultadoConDescuento = Math.round(resultado * 0.95);
+                document.getElementById('resultado').innerText = `El costo del viaje es: ${resultadoConDescuento}`;
+                return;
+          }
+        }
+      
+      function limpiar() {
+          document.getElementById('a').value = '';
+          document.getElementById('b').value = '';
+          document.getElementById('resultado').innerText = '';
+      }
+    </script>
+    <style>
+      body {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(0, 0, 0);
+        color:rgb(19, 26, 50) ;
+      }
+      button {
+        background-color: rgb(19, 26, 50);
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      </style>
+  </head>
+</html>
+<body style="text-align: center; ; background-color: rgb(188, 188, 188);">
+    <fieldset>
+      <div>
+        <img style="border-radius: 50%; border: 2px solid rgb(19, 26, 50); border-color: rgb(19, 26, 50);" src="img/logoagencia.png" alt="Logo de la agencia" width="100" height="100">
+        <h1>Calculadora de Costo de Viaje</h1>
+        
+            <p>
+            <label>Costos de vuelo</label>
+            <input type="number" name="vuelo" id="a" required placeholder="Ingresa el costo de vuelo" />
+        </p>
+        <p>
+            <label>Costos de hospedaje</label>
+            <input type="number" name="hospedaje" id="b" required placeholder="Ingresa el costo de hospedaje" />
+        </p>
+        <button onclick="calculadoraDeViaje()">Calcular Costo</button>
+        <button onclick="limpiar()">Limpiar</button>
+        <p id="resultado"></p>
+    </fieldset>
+    </body>
+    </html>
+    

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector de Menú de Restaurante</title>
+  <link rel="stylesheet" href="menu.css">
+
+   
+    <table width="100%">
+        <tr>
+        <td><img src="imagenes/mclogo.webp" width="17%"></td>
+        <td><center><a href="https://https://www.mcdonalds.com.co//" >Inicio</a></center></td>
+        <td><center><a href="https://https://www.mcdonalds.com.co//" >Quienes Somos</a></center></td>
+        <td><center><a href="https://https://www.mcdonalds.com.co//" >Contáctenos</a></center></td>
+    </table>
+</head>
+
+<body>
+
+<br>
+  <img src="imagenes/combos.jpg" width=100% height="65%">
+
+  <h1>Menú del Restaurante</h1>
+
+  <div class="combo">
+    <label for="combo1">Hamburguesa + papas + gaseosa $25.000:</label>
+    <input type="number" id="combo1" min="0" value="0">
+  </div>
+
+  <div class="combo">
+    <label for="combo2">Hotdog + papas + gaseosa $20.000:</label>
+    <input type="number" id="combo2" min="0" value="0">
+  </div>
+
+  <div class="combo">
+    <label for="combo3">Hamburguesa + Hotdog + 2 gaseosas $40.000:</label>
+    <input type="number" id="combo3" min="0" value="0">
+  </div>
+
+  <button onclick="calcularTotal()">Calcular Total</button>
+
+  <div id="resultado"></div>
+
+  <script src="menu.js"></script>
+</body>
+</html>
+

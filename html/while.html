@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function contadorWhile() {
+                let i = 0;
+                let cadena = "";
+                while(i <= 10000) {
+                    cadena = cadena + "," + i ;
+                    console.log(i + ",");
+                    i++;
+                }
+
+                document.getElementById("contadornumero").innerHTML = cadena;
+            }
+        </script>
+    </head>
+    <body style="text-align:center; background-color: aquamarine;">
+        <h1>Numeros del 1 al 10000 con While</h1>
+        <p id="contadornumero"></p>
+        <button style="background-color: rgb(151, 111, 189);" type="button" onclick="contadorWhile();">Iniciar</button>
+        <p>Presiona el boton para imprimir los nuemros del 1 al 10000 en la consola</p>
+    </body>
+</html>
