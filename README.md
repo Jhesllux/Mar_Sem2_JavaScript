@@ -1,2 +1,2 @@
-# Mar_Sem2_JavaScript
-Trabajo del martes de la semana 2 del bootcamp de programación, siguiendo con el lenguaje de programación.
+# Tue_Week2_JavaScript
+Tuesday's work of the second week of the programming bootcamp, in which we continue with the JavaScript programming language.
